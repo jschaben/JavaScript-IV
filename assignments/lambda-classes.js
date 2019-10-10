@@ -52,11 +52,11 @@ class TeamLead extends Instructor {
         this.bestTL = TeamLeadAttr.bestTL;
     }
     standUp(channel) {
-        return `${this.name} debugs ${student_one.name}'s code on ${student_one.className}`;
+        return `${this.name} debugs ${student1.name}'s code on ${student1.className}`;
     }
 }
 
-const student_one = new Student({
+const student1 = new Student({
     name: 'Josh',
     age: 34,
     location: 'Wichita',
@@ -66,7 +66,7 @@ const student_one = new Student({
 });
 
 
-const instructor_one = new Instructor({
+const instructor1 = new Instructor({
     name: 'Pace',
     age: 26,
     location: 'Mesa',
@@ -75,7 +75,7 @@ const instructor_one = new Instructor({
     catchPhrase: 'Its all going to be ok'
 });
 
-const teamLead_one = new TeamLead({
+const teamLead1 = new TeamLead({
     name: 'Julie',
     age: 25,
     location: 'New York',
@@ -86,9 +86,9 @@ const teamLead_one = new TeamLead({
 
 });
 
-console.log(student_one.myAssignment("HTML"));
-console.log(instructor_one.learning("Classes and Constructors"));
-console.log(`${instructor_one.name} thinks ${instructor_one.catchPhrase}`);
-console.log(teamLead_one.standUp("WebPT11"));
-console.log(instructor_one.grade("Josh", "Javascript IV"));
-console.log(`${teamLead_one.name} says ${teamLead_one.catchPhrase}`);
+console.log(student1.myAssignment("LESS"));
+console.log(instructor1.learning("Converting Constructors"));
+console.log(`${instructor1.name} thinks ${instructor1.catchPhrase}`);
+console.log(teamLead1.standUp("JS III"));
+console.log(instructor1.grade("Josh", "Javascript IV"));
+console.log(`${teamLead1.name} says ${teamLead1.catchPhrase}`);
