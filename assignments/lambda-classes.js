@@ -15,11 +15,11 @@ class Instructor extends Person {
     constructor(InstAttr) {
         super(InstAttr);
         this.specialty = InstAttr.specialty;
-        this.compLanguage = InstAttr.compLanguage;
+        this.favLanguage = InstAttr.favLanguage;
         this.catchPhrase = InstAttr.catchPhrase;
     }
-    learning(project) {
-        return `Today we are learning about ${project}`;
+    demo(subject) {
+        return `Today we are learning about ${subject}`;
     }
     grade(student, subject) {
         return `${student} receives a great score on ${subject}`;
@@ -29,7 +29,7 @@ class Instructor extends Person {
 class Student extends Person {
     constructor(StudentAttr) {
         super(StudentAttr);
-        this.background = StudentAttr.background;
+        this.previousBackground = StudentAttr.background;
         this.className = StudentAttr.className;
         this.favSubjects = StudentAttr.favSubjects;
     }
@@ -37,8 +37,8 @@ class Student extends Person {
     listSubjects(favSubjects) {
         return this.favSubjects;
     }
-    myAssignment(subject) {
-        return `${this.name} has submitted an Assignment for ${subject}.`;
+    PRAssignment(subject) {
+        return `${this.name} has submitted an PR Assignment for ${subject}.`;
     }
     sprintChallenge(subject) {
         return `${this.name} has begun the sprint challenge on ${subject}!`;
@@ -48,8 +48,8 @@ class Student extends Person {
 class TeamLead extends Instructor {
     constructor(TeamLeadAttr) {
         super(TeamLeadAttr);
-        this.gradeClass = TeamLeadAttr.gradeClass;
-        this.bestTL = TeamLeadAttr.bestTL;
+        this.gradeClassName = TeamLeadAttr.gradeClassName;
+        this.favInstructor = TeamLeadAttr.favInstructor;
     }
     standUp(channel) {
         return `${this.name} debugs ${student1.name}'s code on ${student1.className}`;
@@ -86,8 +86,8 @@ const teamLead1 = new TeamLead({
 
 });
 
-console.log(student1.myAssignment("LESS"));
-console.log(instructor1.learning("Converting Constructors"));
+console.log(student1.PRAssignment("LESS"));
+console.log(instructor1.demo("Converting Constructors"));
 console.log(`${instructor1.name} thinks ${instructor1.catchPhrase}`);
 console.log(teamLead1.standUp());
 console.log(instructor1.grade("Josh", "Javascript IV"));
