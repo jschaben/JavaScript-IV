@@ -18,11 +18,11 @@ class Instructor extends Person {
         this.compLanguage = InstAttr.compLanguage;
         this.catchPhrase = InstAttr.catchPhrase;
     }
-    learning(subject) {
-        return `Today we are learning about ${subject}`;
+    learning(project) {
+        return `Today we are learning about ${project}`;
     }
     grade(student, subject) {
-        return `${student} receives a perfect score on ${subject}`;
+        return `${student} receives a great score on ${subject}`;
     }
 }
 
@@ -61,7 +61,7 @@ const student1 = new Student({
     age: 34,
     location: 'Wichita',
     previousBackground: 'Restaurant Management',
-    className: 'JS III',
+    className: 'JS IV',
     favSubjects: ['HTML', 'CSS', 'LESS']
 });
 
@@ -89,6 +89,6 @@ const teamLead1 = new TeamLead({
 console.log(student1.myAssignment("LESS"));
 console.log(instructor1.learning("Converting Constructors"));
 console.log(`${instructor1.name} thinks ${instructor1.catchPhrase}`);
-console.log(teamLead1.standUp("JS III"));
+console.log(teamLead1.standUp());
 console.log(instructor1.grade("Josh", "Javascript IV"));
 console.log(`${teamLead1.name} says ${teamLead1.catchPhrase}`);
